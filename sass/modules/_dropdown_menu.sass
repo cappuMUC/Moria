@@ -1,0 +1,42 @@
+$c-dropdown-content-border: #cccccc
+$c-dropdown-content-background: #cccccc
+    
+.drdn
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    flex: 1 0 auto
+    &:hover .drdn-content
+        display: block
+    &:hover::after
+        content: ''
+        width: 0
+        height: 0
+        position: absolute
+        top: 100%
+        left: 50%
+        display: block
+        background-color: transparent
+        border-left: 10px solid transparent
+        border-right: 10px solid transparent
+        border-bottom: 10px solid $c-dropdown-content-background
+
+.drdn-trigger
+    display: block
+    background: red
+    flex-grow: 2
+        
+    
+
+.drdn-content
+    display: none
+    position: absolute
+    top: calc(100% + 8px)
+    z-index: 1
+    min-width: 10vw
+    border: 1px solid $c-dropdown-content-border
+    background-color: $c-dropdown-content-background
+    
+
+
