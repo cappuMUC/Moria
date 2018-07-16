@@ -1,6 +1,6 @@
 $c-dropdown-content-border: #cccccc
 $c-dropdown-content-background: #cccccc
-    
+
 .drdn
     position: relative
     display: flex
@@ -15,7 +15,7 @@ $c-dropdown-content-background: #cccccc
         height: 0
         position: absolute
         top: 100%
-        left: 50%
+        left: 25%
         display: block
         background-color: transparent
         border-left: 10px solid transparent
@@ -24,10 +24,22 @@ $c-dropdown-content-background: #cccccc
 
 .drdn-trigger
     display: block
-    background: red
     flex-grow: 2
-        
-    
+    &::after
+        content: ''
+        border: solid black
+        border-width: 0 2px 2px 0
+        display: inline-block
+        padding: 3px
+        margin: 2px 4px
+        transform: rotate(45deg)
+        transition: transform 300ms ease-in-out, margin 300ms linear
+
+    &:hover::after
+        transform: rotate(-135deg)
+        margin: -1px 4px
+
+
 
 .drdn-content
     display: none
@@ -37,6 +49,3 @@ $c-dropdown-content-background: #cccccc
     min-width: 10vw
     border: 1px solid $c-dropdown-content-border
     background-color: $c-dropdown-content-background
-    
-
-

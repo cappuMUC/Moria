@@ -1,0 +1,28 @@
+$c-calendar-background: #e0e0e0
+$c-calendar-border: black
+$c-calendar-entry-background: #c0c070
+$c-calendar-tip-background: #c0c0c0
+
+table.cal
+    background-color: $c-calendar-background
+
+    &, th, td
+        border: 1px solid $c-calendar-border
+        border-collapse: collapse
+        padding: 3px
+
+
+table.cal div.issue
+    position: relative
+    padding: 3px
+    margin: 3px 0
+    background-color: $c-calendar-entry-background
+    &:hover span.tip
+        display: block
+    span.tip
+        position: absolute
+        top: 10px
+        left: 10px
+        z-index: 1
+        background-color: $c-calendar-tip-background
+        display: none

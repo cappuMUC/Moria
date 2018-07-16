@@ -1,0 +1,25 @@
+$d-main-menu-height:2em
+$c-main-menu-background: #8888aa
+
+
+#main-menu
+  height: $d-main-menu-height
+  background-color: $c-main-menu-background
+  & > ul
+    position: relative
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    li
+        margin: 0 3px
+        a
+            text-decoration: none
+
+
+ul.menu-children
+  position: absolute
+  display: none
+  flex-direction: column
+  justify-content: flex-start
+  background-color: aqua

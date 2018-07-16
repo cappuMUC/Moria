@@ -1,25 +1,55 @@
+$d-top-menu-height:4em
+$c-top-menu-background: #9999aa
+
 #top-menu
+    background-color: $c-top-menu-background
+    height: $d-top-menu-height
     border-bottom: 1px solid black
     display: flex
     flex-direction: row-reverse
-    justify-content: space-around
-    flex: 1 0 auto
+    justify-content: space-between
+    align-items: center
     & > *
         margin: 0 1vw
     h1
-        flex-grow: 2
-    & ul
+        width: 30vw
+        span.current-project
+            font-size: 1em
+            flex-grow: 2
+        span.breadcrumbs
+            display: none
+            font-size: 0.5em
+    & > ul
         display: flex
         flex-direction: row
         align-items: center
-        justify-content: space-around
+        justify-content: space-between
+        li
+            margin: 0 5px
+        // TODO remove this hack after removing the top-menu items
+        & li:nth-child(2)
+            display: none
+        & li:nth-child(3)
+            display: none
+        & li:nth-child(4)
+            display: none
 
 #quick-search
+    width: 30vw
     display: flex
-    flex-direction: row-reverse
-    justify-content: stretch
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+    & > *
+        margin: 0 1vw
     label
         display: none
+    input[type="text"]
+        width: 250px
 
 #project-jump
+    span
 
+
+#loggedas
+    display: none
