@@ -1,5 +1,5 @@
-$c-dropdown-content-border: #cccccc
-$c-dropdown-content-background: #cccccc
+$c-dropdown-content-border: darken( $c-theme-2, 5% )
+$c-dropdown-content-background: lighten( $c-theme-2, 5% )
 
 .drdn
     position: relative
@@ -20,14 +20,15 @@ $c-dropdown-content-background: #cccccc
         background-color: transparent
         border-left: 10px solid transparent
         border-right: 10px solid transparent
-        border-bottom: 10px solid $c-dropdown-content-background
+        border-bottom: 10px solid $c-dropdown-content-border
 
 .drdn-trigger
+    color: $c-theme-1
     display: block
     flex-grow: 2
     &::after
         content: ''
-        border: solid black
+        border: solid $c-theme-1
         border-width: 0 2px 2px 0
         display: inline-block
         padding: 3px
@@ -47,5 +48,8 @@ $c-dropdown-content-background: #cccccc
     top: calc(100% + 8px)
     z-index: 1
     min-width: 10vw
+    padding: 5px 2px
     border: 1px solid $c-dropdown-content-border
+    border-radius: 3px
     background-color: $c-dropdown-content-background
+    color: $c-theme-1

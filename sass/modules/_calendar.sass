@@ -1,15 +1,27 @@
-$c-calendar-background: #e0e0e0
-$c-calendar-border: black
-$c-calendar-entry-background: #c0c070
+$c-calendar-background: $c-theme-2
+$c-calendar-current-month-background: #ffffff
+$c-calendar-adjacent-month-background: darken( $c-calendar-current-month-background, 10% )
+$c-calendar-border: darken( $c-calendar-adjacent-month-background, 10% ) 
+$c-calendar-weekday-background: $c-theme-2 
+$c-calendar-entry-background: lighten( $c-theme-2, 20% )
 $c-calendar-tip-background: #c0c0c0
 
 table.cal
+    margin: 10px 0
     background-color: $c-calendar-background
-
-    &, th, td
+    & th, & td
+        padding: 3px
+    & td
         border: 1px solid $c-calendar-border
         border-collapse: collapse
-        padding: 3px
+        height: 100px
+        &.even
+            background-color: $c-calendar-current-month-background
+        &.odd
+            background-color: $c-calendar-adjacent-month-background
+        &.week-number
+            background-color: $c-calendar-weekday-background
+            border: none
 
 
 table.cal div.issue
@@ -26,3 +38,4 @@ table.cal div.issue
         z-index: 1
         background-color: $c-calendar-tip-background
         display: none
+

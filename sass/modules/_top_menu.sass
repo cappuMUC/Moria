@@ -1,5 +1,6 @@
 $d-top-menu-height:4em
-$c-top-menu-background: #9999aa
+$c-top-menu-background: $c-theme-2
+$c-top-menu-search-background: darken( $c-theme-2, 5% )
 
 #top-menu
     background-color: $c-top-menu-background
@@ -11,14 +12,6 @@ $c-top-menu-background: #9999aa
     align-items: center
     & > *
         margin: 0 1vw
-    h1
-        width: 30vw
-        span.current-project
-            font-size: 1em
-            flex-grow: 2
-        span.breadcrumbs
-            display: none
-            font-size: 0.5em
     & > ul
         display: flex
         flex-direction: row
@@ -33,6 +26,17 @@ $c-top-menu-background: #9999aa
             display: none
         & li:nth-child(4)
             display: none
+    h1
+        width: 30vw
+        color: $c-theme-1
+        span.current-project
+            font-size: 1em
+            flex-grow: 2
+        span.breadcrumbs
+            display: none
+            font-size: 0.5em
+    a
+        color: $c-theme-1
 
 #quick-search
     width: 30vw
@@ -46,7 +50,12 @@ $c-top-menu-background: #9999aa
         display: none
     input[type="text"]
         width: 250px
-
+        padding: 3px
+        color: $c-theme-1
+        background: $c-top-menu-search-background
+        border-radius: 3px
+        border: none
+        
 #project-jump
     span
 
