@@ -10,6 +10,7 @@ html, body, #wrapper, #wrapper2
     flex-grow: 2
     display: flex
     flex-direction: column
+    background-color: $c-theme-2
 
 
 #main
@@ -17,8 +18,10 @@ html, body, #wrapper, #wrapper2
     flex-grow: 2
     flex-direction: row
     justify-content: stretch
-    &.nosidebar div.sidebar
+    &.nosidebar #sidebar
         display: none
+    &.nosidebar #content
+        flex-basis: 100%
 
 #content
 
@@ -30,7 +33,8 @@ html, body, #wrapper, #wrapper2
     justify-content: space-between
     align-content: flex-start
     flex-wrap: wrap
-    overflow-x: scroll
+    overflow-x: hidden
+    background: transparent
     & > h2
         flex-basis: 50%
         order: -1
