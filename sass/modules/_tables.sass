@@ -1,0 +1,23 @@
+$c-table-background: lighten( $c-theme-2, 10% )
+table
+    padding: 10px 0
+    thead
+        th
+            height: 3em
+            background: darken( $c-table-background, 3% )
+            padding: 8px
+    tbody
+        background: transparent
+
+
+        tr
+            height: 2em
+            line-height: 2em
+            background: $c-table-background
+            &.odd
+                background: lighten( $c-table-background, 3% )
+            &.hascontextmenu
+                cursor: context-menu
+        td
+            padding: 4px
+            text-align: center

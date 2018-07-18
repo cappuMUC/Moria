@@ -44,6 +44,11 @@ html, body, #wrapper, #wrapper2
         flex-direction: row
         justify-content: flex-end
         flex-basis: 50%
+        flex-grow: 2
+        & > *
+            padding: 0 4px
+        & form
+            flex-basis: unset
 
 #sidebar
     order: 2
@@ -52,4 +57,7 @@ html, body, #wrapper, #wrapper2
 
 div.splitcontentleft,
 div.splitcontentright
-    flex-basis: 50%
+    flex-basis: 45%
+
+div.autoscroll
+    flex-basis: 100%
