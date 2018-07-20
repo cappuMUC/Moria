@@ -1,0 +1,48 @@
+@mixin highlight_column()
+  background: lighten( $c-theme-2, 10% )
+  transition: background 300ms ease-in-out
+  &:hover
+    background: lighten( $c-theme-2, 15% )
+  &.selected
+    background: lighten( $c-theme-2, 15% )
+
+#sidebar
+  h3
+    background: lighten( $c-theme-2, 5% )
+    padding: 10px
+    margin: 0px
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+
+  ul
+    background: lighten( $c-theme-2, 10% )
+    margin-bottom: 25px
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+    li
+      margin: 0
+      & > a
+        @include highlight_column
+        text-decoration: none
+        display: block
+        font-weight: bold
+        padding: 7px 5px
+
+
+#sidebar > form
+  li
+    @include highlight_column
+    display: flex
+    flex-direction: row
+    align-items: stretch
+    padding: 5px
+    label
+      flex-grow: 2
+      a
+        padding-left: 5px
+        text-decoration: none
+        display: block
+        font-weight: bold
+
+$sidebar_containers: (h3, div, ul, p span, form)
+@each $container in $sidebar_containers
+  #sidebar #{$container}
+    width: 100%

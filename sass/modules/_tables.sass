@@ -1,10 +1,11 @@
 $c-table-background: lighten( $c-theme-2, 10% )
 table
-    padding: 10px 0
+    margin: 15px 0
+    border-radius: 3px
+    background: darken( $c-table-background, 3% )
     thead
         th
             height: 3em
-            background: darken( $c-table-background, 3% )
             padding: 8px
     tbody
         background: transparent
@@ -21,3 +22,11 @@ table
         td
             padding: 4px
             text-align: center
+
+        td:first-child
+            text-align: left
+
+td.checkbox
+    text-align: center !important
+td.buttons
+    text-align: right !important

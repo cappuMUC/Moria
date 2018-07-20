@@ -1,5 +1,7 @@
-#query_form
+#query-form,
+#query_form_with_buttons
     flex-basis: 100%
+
 
 #query_form_with_buttons
     display: flex
@@ -19,5 +21,23 @@
             margin: 3px
 
 #query_form_content
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
     flex-basis: 100%
+    flex-wrap: wrap
     margin-bottom: 5px
+    #options
+        flex-basis: 100%
+
+#filters > div
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+
+
+#filters-table
+    flex-basis: 70%
+    background: transparent
+    & tr, & td
+        background: transparent
