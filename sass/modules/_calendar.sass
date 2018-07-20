@@ -1,22 +1,21 @@
 $c-calendar-background: $c-theme-2
-$c-calendar-current-month-background: lighten($c-theme-2, 5%)
-$c-calendar-adjacent-month-background: darken( $c-calendar-current-month-background, 10% )
+$c-calendar-current-month-background: lighten($c-theme-2, 1%)
+$c-calendar-adjacent-month-background: darken( $c-calendar-current-month-background, 5% )
 $c-calendar-border: darken( $c-calendar-adjacent-month-background, 10% )
-$c-calendar-weekday-background: darken($c-theme-2, 5%)
+$c-calendar-weekday-background: darken($c-theme-2, 2%)
 $c-calendar-entry-background: lighten( $c-theme-2, 20% )
 $c-calendar-tip-background: #c0c0c0
 
 table.cal
     margin: 10px 0
     background-color: $c-calendar-background
+    border-collapse: collapse
     & th, & td
         padding: 3px
     & tr
         border: none
-        border-collapse: collapse
     & td
         border: 1px solid $c-calendar-border
-        border-collapse: collapse
         height: 100px
         &.even
             background-color: $c-calendar-current-month-background
@@ -24,13 +23,14 @@ table.cal
             background-color: $c-calendar-adjacent-month-background
         &.week-number
             background-color: $c-calendar-weekday-background
-            border: none
+
 
 
 table.cal div.issue
     position: relative
-    padding: 3px
-    margin: 3px 0
+    padding: 5px
+    margin: 5px 0
+    border-radius: 3px
     background-color: $c-calendar-entry-background
     &:hover span.tip
         display: block
