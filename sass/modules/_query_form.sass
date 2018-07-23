@@ -32,7 +32,7 @@
 
 #filters > div
     display: flex
-    flex-direction: row
+    flex-direction: column
     justify-content: flex-start
 
 
@@ -41,3 +41,24 @@
     background: transparent
     & tr, & td
         background: transparent
+
+#filters, #options
+    table td:nth-child(2)
+        width: 80%
+        text-align: left
+
+#options
+    table
+        background: transparent
+    tr
+        background: transparent
+
+span.query-columns
+    display: flex
+    span
+        display: flex
+        flex-direction: column
+    span.buttons
+        display: flex
+        flex-direction: column
+        justify-content: center

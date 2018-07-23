@@ -1,5 +1,5 @@
-$c-dropdown-content-border: lighten( $c-theme-2, 5% )
-$c-dropdown-content-background: lighten( $c-theme-2, 8% )
+$c-dropdown-content-border: lighten( $c-theme-2, 18% )
+$c-dropdown-content-background: lighten( $c-theme-2, 15% )
 
 .drdn
     position: relative
@@ -37,7 +37,7 @@ $c-dropdown-content-background: lighten( $c-theme-2, 8% )
         transform: rotate(45deg)
         transition: transform 300ms ease-in-out, margin 300ms linear
 
-.drdn.expanded .drdn-trigger::after    
+.drdn.expanded .drdn-trigger::after
     transform: rotate(-135deg)
     margin: -1px 4px
 
@@ -53,18 +53,17 @@ $c-dropdown-content-background: lighten( $c-theme-2, 8% )
     border: 1px solid $c-dropdown-content-border
     border-radius: 3px
     background-color: $c-dropdown-content-background
-    box-shadow: 0 1 10px white
+    box-shadow: $s-box-shadow-high
     color: $c-theme-1
 
 .drdn-items.projects
     display: flex
     flex-direction: column
     justify-content: flex-start
-    
+
 .drdn-shadow
     position: absolute
     top: 0
     left: 0
     width: 100%
     height: 100%
-

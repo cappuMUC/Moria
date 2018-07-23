@@ -1,5 +1,5 @@
-$c-button-border: lighten( $c-theme-2, 5% )
-$c-button-background: lighten( $c-theme-2, 15% )
+$c-button-border: darken( $c-theme-2, 2% )
+$c-button-background: $c-theme-2
 
 
 input, select, textarea
@@ -7,13 +7,15 @@ input, select, textarea
   background: $c-button-background
   border-radius: 3px
   border: 1px solid $c-button-border
+  font-size: 1.2em
+  padding: 4px
+  margin: 5px
   &:focus
 
 input[type="button"],
 input[type="submit"],
 input[type="reset"]
   min-width: 50px
-  padding: 3px
   margin: 5px 0
   transition: background 300ms ease-in-out, color 300ms ease-in-out
   &:hover

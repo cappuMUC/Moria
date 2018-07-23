@@ -10,13 +10,18 @@ table.cal
     margin: 10px 0
     background-color: $c-calendar-background
     border-collapse: collapse
-    & th, & td
-        padding: 3px
+
+    & th
+        border: 1px solid $c-calendar-border
+        background-color: $c-calendar-weekday-background
     & tr
         border: none
     & td
+        padding: 3px
         border: 1px solid $c-calendar-border
         height: 100px
+        vertical-align: top
+        text-align: left
         &.even
             background-color: $c-calendar-current-month-background
         &.odd
