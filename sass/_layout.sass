@@ -1,10 +1,10 @@
 html, body, #wrapper, #wrapper2
     height: 100%
 
-#wrapper2
+#wrapper,#wrapper2
     display: flex
     flex-direction: column
-    flex: 1 0 auto
+    align-items: stretch
 
 #wrapper3
     flex-grow: 2
@@ -18,13 +18,13 @@ html, body, #wrapper, #wrapper2
     flex-grow: 2
     flex-direction: row
     justify-content: stretch
+    background-color: #fff
     &.nosidebar #sidebar
         display: none
     &.nosidebar #content
         flex-basis: 100%
 
 #content
-
     position: relative
     padding: 10px 15px
     display: flex
@@ -32,22 +32,33 @@ html, body, #wrapper, #wrapper2
     flex-direction: row
     justify-content: space-between
     align-content: flex-start
+    align-items: center
     flex-wrap: wrap
     overflow-x: hidden
     background: transparent
+    & > div.splitcontentleft,
+    & > div.splitcontentright
+        flex-basis: 100%
+        margin: 15px 20vw
     & > h2
-        flex-basis: 50%
+        display: inline
         order: -1
+        flex-shrink: 1
         height: 2em
+        padding: 6px 8px
+        border-radius: 5px
+        background: $c-theme-2
+        color: #ffffff
+        a
+            color: #ffffff
     div.contextual
         display: flex
         flex-direction: row
         justify-content: flex-end
-        flex-basis: 50%
-        flex-grow: 2
+        flex-grow: 1
             padding: 0 4px
         & > a
-            margin: 0 3px
+            margin: 0 8px
         & form
             flex-basis: unset
     span.pagination
@@ -64,9 +75,7 @@ html, body, #wrapper, #wrapper2
 
 
 
-div.splitcontentleft,
-div.splitcontentright
-    flex-basis: 45%
+
 
 div.autoscroll
     flex-basis: 100%

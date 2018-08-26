@@ -1,35 +1,31 @@
-@mixin highlight_column()
-  background: lighten( $c-theme-2, 10% )
-  transition: background 300ms ease-in-out
-  &:hover
-    background: lighten( $c-theme-2, 15% )
-  &.selected
-    background: lighten( $c-theme-2, 15% )
+
 
 #sidebar
   h3
-    background: lighten( $c-theme-2, 5% )
+    background: $c-theme-2
     padding: 10px
     margin: 0px
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+    color: $c-basic-font-light
 
   ul
-    background: lighten( $c-theme-2, 10% )
+    background: #ffffff
     margin-bottom: 25px
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
     li
       margin: 0
       & > a
-        @include highlight_column
+        @include highlight_column( #00ff66 )
         text-decoration: none
         display: block
         font-weight: bold
         padding: 7px 5px
+        color: $c-basic-link-dark
 
 
 #sidebar > form
   li
-    @include highlight_column
+    @include highlight_column( #00ff66 )
     display: flex
     flex-direction: row
     align-items: stretch

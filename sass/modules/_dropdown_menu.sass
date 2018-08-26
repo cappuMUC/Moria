@@ -1,5 +1,5 @@
-$c-dropdown-content-border: lighten( $c-theme-2, 18% )
-$c-dropdown-content-background: lighten( $c-theme-2, 15% )
+$c-dropdown-content-border: #e0e0e0
+$c-dropdown-content-background: #ffffff
 
 .drdn
     position: relative
@@ -24,12 +24,12 @@ $c-dropdown-content-background: lighten( $c-theme-2, 15% )
         box-shadow: 0 0 10px inset black
 
 .drdn-trigger
-    color: $c-theme-1
+    color: $c-theme-2
     display: block
     flex-grow: 2
     &::after
         content: ''
-        border: solid $c-theme-1
+        border: solid $c-theme-2
         border-width: 0 2px 2px 0
         display: inline-block
         padding: 3px
@@ -54,7 +54,7 @@ $c-dropdown-content-background: lighten( $c-theme-2, 15% )
     border-radius: 3px
     background-color: $c-dropdown-content-background
     box-shadow: $s-box-shadow-high
-    color: $c-theme-1
+    color: $c-theme-2
 
 .drdn-items.projects
     display: flex

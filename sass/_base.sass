@@ -16,7 +16,27 @@ a
     font-size: 100%
     vertical-align: baseline
     background: transparent
-    color: $c-basic-link
+    color: $c-basic-link-dark
+
+h1
+    font-size: 2em
+    line-height: 2em
+    margin-bottom: 10px
+
+h2
+    font-size: 1.4em
+    display: flex
+    align-items: center
+    img
+        margin-right: 6px
+
+h3
+    font-size: 1.2em
+    display: flex
+    align-items: center
+    margin-bottom: 10px
+    img
+        margin-right: 6px
 
 img,object,embed
     max-width: 100%
@@ -73,14 +93,20 @@ input[type="button"]
 
 fieldset
     flex-basis: 100%
-    background-color: lighten($c-theme-2, 2%)
+    background-color: #f0f0f0
     padding: 5px
     margin: 5px 0
-    border-radius: 3px
     border-width: 1px
+    border-color: #c7c7c7
     border-style: solid
-    border-color: darken($c-theme-2, 2%)
     cursor: pointer
+    color: $c-basic-font
+    &.collapsed
+        border-width: 1px 0 0 0
+        background: transparent
 
 form
     flex-basis: 100%
+
+.gravatar
+    border-radius: 50%

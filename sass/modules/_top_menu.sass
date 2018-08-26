@@ -1,6 +1,8 @@
 $d-top-menu-height:4em
 $c-top-menu-background: $c-theme-2
 $c-top-menu-search-background: darken( $c-theme-2, 3% )
+$s-logo: 1.4em
+
 
 #top-menu
     background-color: $c-top-menu-background
@@ -19,24 +21,28 @@ $c-top-menu-search-background: darken( $c-theme-2, 3% )
         justify-content: space-between
         li
             margin: 0 5px
-        // TODO remove this hack after removing the top-menu items
-        & li:nth-child(2)
-            display: none
-        & li:nth-child(3)
-            display: none
-        & li:nth-child(4)
-            display: none
     h1
         width: 30vw
         color: $c-theme-1
+        display: flex
+        flex-direction: row
+        align-items: center
         span.current-project
             font-size: 1em
             flex-grow: 2
         span.breadcrumbs
             display: none
             font-size: 0.5em
+    h1:before
+        content: ''
+        width: $s-logo
+        height: $s-logo
+        background: url(../images/moria-logo.png) no-repeat
+        background-size: contain
+        margin-right: 5px
     a
         color: $c-theme-1
+
 
 #quick-search
     width: 30vw
@@ -60,10 +66,6 @@ $c-top-menu-search-background: darken( $c-theme-2, 3% )
         border: 1px solid darken($c-top-menu-background,8%)
 
 
-#project-jump
-    span
-
-
 #loggedas
     display: none
     a
@@ -72,3 +74,11 @@ $c-top-menu-search-background: darken( $c-theme-2, 3% )
         background: $c-basic-ok
         color: $c-theme-2
         font-weight: 400
+
+
+#account ul
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    li
+        margin: 0 5px

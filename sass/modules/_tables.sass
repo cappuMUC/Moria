@@ -1,16 +1,25 @@
-$c-table-background: lighten( $c-theme-2, 10% )
+$c-table-background: transparent
+$c-table-head-background: $c-theme-2
+$c-table-head-font: $c-basic-font-light
+
 table
     margin: 15px 0
-    border-radius: 3px
-    background: darken( $c-table-background, 3% )
+    background: $c-table-background
+    color: $c-basic-font
+    a
+        color: $c-basic-link-dark
     thead
+        background: $c-table-head-background
+        color: $c-table-head-font
         th
             height: 3em
             padding: 8px
+            line-height: 3
+            a
+                color: $c-basic-link-light
+                text-decoration: none
     tbody
         background: transparent
-
-
         tr
             height: 2em
             line-height: 2em
@@ -19,9 +28,13 @@ table
                 background: lighten( $c-table-background, 3% )
             &.hascontextmenu
                 cursor: context-menu
+
+        tr:last-child td
+            border: none
         td
             padding: 4px
             text-align: center
+            border-bottom: 1px solid #e0e0e0
 
         td:first-child
             text-align: left
@@ -30,3 +43,18 @@ td.checkbox
     text-align: center !important
 td.buttons
     text-align: right !important
+
+a.sort
+    color: #ffffff
+    &::after
+        content: ''
+        border: solid #00ff66
+        border-width: 0 2px 2px 0
+        display: inline-block
+        padding: 3px
+        margin: 2px 4px
+    &.asc::after
+        transform: rotate(45deg)
+    &.desc::after
+        transform: rotate(-135deg)
+        margin: -1px 4px

@@ -1,0 +1,265 @@
+@import "https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+
+@mixin fa_icon( $character )
+    content: $character
+    font-family: "Font Awesome 5 Free"
+    font-size: 1rem
+    font-weight: 400
+    letter-spacing: normal
+    padding-right: 3px
+
+.icon, .icon-only
+    text-decoration: none
+
+.icon-only
+    font-size: 0
+
+.icon-only::before
+    display: inline
+
+.icon:before
+    display: inline-block
+    font-style: normal
+    font-variant: normal
+    text-rendering: auto
+    -webkit-font-smoothing: antialiased
+
+.icon-add::before
+    @include fa_icon( "\f055" )
+    font-weight: 900
+
+.icon-edit::before
+    @include fa_icon( "\f303" )
+    font-weight: 900
+
+.icon-copy::before
+    @include fa_icon( "\f0c5" )
+    font-weight: 900
+
+.icon-del::before
+    @include fa_icon( "\f1f8" )
+    font-weight: 900
+
+.icon-fav-off::before
+    @include fa_icon( "\f06e" )
+
+.icon-fav::before
+    @include fa_icon( "\f070" )
+
+.icon-unlock::before
+    @include fa_icon( "\f09c" )
+    font-weight: 900
+
+.icon-lock::before
+    @include fa_icon( "\f023" )
+    font-weight: 900
+
+.icon-actions:before
+    @include fa_icon( "\f141" )
+    font-weight: 900
+
+.icon-checked:before
+    @include fa_icon( "\f00c" )
+    font-weight: 900
+
+.icon-reload:before
+    @include fa_icon( "\f0e2" )
+    font-weight: 900
+
+.icon-save:before
+    @include fa_icon( "\f0c7" )
+    font-weight: 900
+
+.icon-ok:before
+    @include fa_icon("\f00c")
+    font-weight: 900
+
+.icon-error:before
+    @include fa_icon("\f00d")
+    font-weight: 900
+
+.icon-user:before
+    @include fa_icon( "\f007" )
+    font-weight: 900
+
+.icon-group:before
+    @include fa_icon( "\f0c0" )
+    font-weight: 900
+
+.icon-roles:before
+    @include fa_icon( "\f508" )
+    font-weight: 900
+
+.icon-workflows:before
+    @include fa_icon( "\f4d7" )
+    font-weight: 900
+
+.icon-custom-fields:before
+    @include fa_icon( "\f069" )
+    font-weight: 900
+
+.icon-list:before
+    @include fa_icon( "\f03a" )
+    font-weight: 900
+
+.icon-settings:before
+    @include fa_icon( "\f085" )
+    font-weight: 900
+
+.icon-plugins:before
+    @include fa_icon( "\f12e" )
+    font-weight: 900
+
+.icon-help:before
+    @include fa_icon( "\f059" )
+    font-weight: 900
+
+.icon-help.info:before
+    @include fa_icon( "\f05a" )
+    font-weight: 900
+
+.icon-server-authentication:before
+    @include fa_icon( "\f1c0" )
+    font-weight: 900
+
+.icon-passwd:before
+    @include fa_icon( "\f084" )
+    font-weight: 900
+
+.icon-zoom-in:before
+    @include fa_icon( "\f00e" )
+    font-weight: 900
+
+.icon-zoom-out:before
+    @include fa_icon( "\f010" )
+    font-weight: 900
+
+.icon-time:before
+    @include fa_icon( "\f017" )
+    font-weight: 900
+
+.icon-time-add:before
+    @include fa_icon( "\f017" )
+    font-weight: 900
+
+.icon-email-add:before
+    @include fa_icon( "\f0e0" )
+    font-weight: 900
+
+.icon-link-break:before
+    @include fa_icon( "\127" ) // TODO fix broken icon
+    font-weight: 900
+
+.icon-comment:before
+    @include fa_icon( "\f075" )
+    font-weight: 900
+
+.icon-projects:before
+    @include fa_icon( "\f542" )
+    font-weight: 900
+
+.icon-package:before
+    @include fa_icon( "\f1b3" )
+    font-weight: 900
+
+.icon-news:before
+    @include fa_icon( "\f1ea" )
+    font-weight: 900
+
+.icon-issue:before
+    @include fa_icon( "\f249" )
+    font-weight: 900
+
+.icon-issue-edit:before
+    @include fa_icon( "\f044" )
+    font-weight: 900
+
+.icon-folder:before
+    @include fa_icon( "\f07b" )
+    font-weight: 900
+
+.open .icon-folder:before
+    @include fa_icon( "\f07c" )
+    font-weight: 900
+
+.icon-file
+    &.text-plain:before
+        @include fa_icon( "\f15c" )
+        font-weight: 900
+
+.starting:before
+    @include fa_icon( "\f144" )
+    color: #00ff66
+    margin-left: 4px
+
+.ending:before
+    @include fa_icon( "\f28d" )
+    color: #ff0033
+    margin-left: 4px
+
+.starting.ending:before
+    @include fa_icon( "\f192" )
+    color: #0033ff
+    margin-left: 4px
+
+
+#top-menu > ul li
+    a
+        font-size: 0
+        text-decoration: none
+    &:nth-child(1) a:before
+            @include fa_icon( "\f015" )
+            font-weight: 900
+            font-size: 1.3rem
+    &:nth-child(2) a:before
+            @include fa_icon( "\f00b" )
+            font-weight: 900
+            font-size: 1.3rem
+    &:nth-child(3) a:before
+            @include fa_icon( "\f542" )
+            font-weight: 900
+            font-size: 1.3rem
+    &:nth-child(4) a:before
+            @include fa_icon( "\f1cd" )
+            font-weight: 900
+            font-size: 1.3rem
+
+a.logout
+    font-size: 0
+    text-decoration: none
+    &:before
+        @include fa_icon( "\f52a" )
+        font-weight: 900
+        font-size: 1.3rem
+
+a.login
+    font-size: 0
+    text-decoration: none
+    &:before
+        @include fa_icon( "\f52b" )
+        font-weight: 900
+        font-size: 1.3rem
+
+a.register
+    font-size: 0
+    text-decoration: none
+    &:before
+        @include fa_icon( "\f234" )
+        font-weight: 900
+        font-size: 1.3rem
+
+a.my-account
+    font-size: 0
+    text-decoration: none
+    &:before
+        @include fa_icon( "\f007" )
+        font-weight: 900
+        font-size: 1.3rem
+
+span.sort-handle
+    font-size: 0
+    text-decoration: none
+    &:before
+        @include fa_icon( "\f58e" )
+        font-weight: 900
+        font-size: 1rem

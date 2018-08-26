@@ -1,9 +1,9 @@
-$c-calendar-background: $c-theme-2
-$c-calendar-current-month-background: lighten($c-theme-2, 1%)
-$c-calendar-adjacent-month-background: darken( $c-calendar-current-month-background, 5% )
+$c-calendar-background: #ffffff
+$c-calendar-current-month-background: #fafafa
+$c-calendar-adjacent-month-background: #ffffff
 $c-calendar-border: darken( $c-calendar-adjacent-month-background, 10% )
 $c-calendar-weekday-background: darken($c-theme-2, 2%)
-$c-calendar-entry-background: lighten( $c-theme-2, 20% )
+$c-calendar-entry-background: transparent
 $c-calendar-tip-background: #c0c0c0
 
 table.cal
@@ -16,7 +16,7 @@ table.cal
         background-color: $c-calendar-weekday-background
     & tr
         border: none
-    & td
+    & td, &:last-child td
         padding: 3px
         border: 1px solid $c-calendar-border
         height: 100px

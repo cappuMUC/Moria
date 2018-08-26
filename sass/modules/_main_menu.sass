@@ -1,29 +1,46 @@
-$d-main-menu-height:2em
-$c-main-menu-background: darken( $c-theme-2, 5% )
+$d-main-menu-height:3em
+$c-main-menu-background: #f0f0f0
+$c-main-menu-link: $c-basic-link-dark
 
 
 #main-menu
   height: $d-main-menu-height
+  flex-basis: 100%
   background-color: $c-main-menu-background
+  box-shadow: 0 -4px 4px -4px #909090 inset
   & > ul
-    height: 100%
+    height: inherit
     position: relative
     display: flex
     flex-direction: row
     justify-content: flex-start
     align-items: center
+    padding: 0 5%
     li
-        margin: 0 3px
         a
+            display: block
+            font-size: 1.1em
+            font-weight: 600
             text-decoration: none
-            padding: 2px
+            padding: 0 20px
+            color: $c-main-menu-link
+            transition: color 300ms ease-in-out
         a.selected
-            border-bottom: 2px solid $color2
-
+            border-bottom: 3px solid #00ff66
+            margin-bottom: -3px
+        a:hover
+            color: $c-theme-2
 
 ul.menu-children
   position: absolute
   display: none
   flex-direction: column
-  justify-content: flex-start
-  background-color: aqua
+  justify-content: stretch
+  background-color: white
+  li a
+      @include highlight_column( #00ff66 )
+      padding: 5px 10px !important
+
+ul.menu-children.visible
+    display: flex
+    z-index: 99

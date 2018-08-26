@@ -2,22 +2,22 @@ $c-button-border: darken( $c-theme-2, 2% )
 $c-button-background: $c-theme-2
 
 
-input, select, textarea
-  color: $c-theme-1
-  background: $c-button-background
-  border-radius: 3px
+input, select, textarea, p.buttons a
+  color: #ffffff !important
+  background: $c-button-background !important
+  border-radius: 2px
   border: 1px solid $c-button-border
   font-size: 1.2em
-  padding: 4px
+  padding: 3px
   margin: 5px
-  &:focus
 
 input[type="button"],
 input[type="submit"],
-input[type="reset"]
+input[type="reset"],
+p.buttons a
   min-width: 50px
   margin: 5px 0
   transition: background 300ms ease-in-out, color 300ms ease-in-out
   &:hover
-    background: $color2
-    color: $c-theme-2
+    background: #00ff66 !important
+    color: $c-theme-2 !important
