@@ -3,16 +3,25 @@ $c-form-font-color: lighten( $c-theme-2, 80% )
 
 
 #login-form
-    margin-top: 10vh
     padding: 12px
     width: 20vw
+    border: 1px solid rgba(87,87,87,0.4)
     border-radius: 2px
     color: $c-basic-font
     font-weight: bold
     background-color: #ffffff
+    box-shadow: 2px 5px 10px rgba(42,42,42,0.5)
     form
         margin: auto
         display: flex
         flex-direction: column
         & > *
             margin: 3px
+        &::before
+            content: ''
+            height: 120px
+            width: 100%
+            background: $c-theme-2 url(../images/moria-logo.png) no-repeat
+            background-size: contain
+            background-position: center
+            border: 10px solid $c-theme-2
