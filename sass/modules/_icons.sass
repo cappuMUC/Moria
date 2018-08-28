@@ -207,19 +207,23 @@
     a
         font-size: 0
         text-decoration: none
-    &:nth-child(1) a:before
+    &.home a:before
             @include fa_icon( "\f015" )
             font-weight: 900
             font-size: 1.1rem
-    &:nth-child(2) a:before
+    &.my-page a:before
             @include fa_icon( "\f00b" )
             font-weight: 900
             font-size: 1.1rem
-    &:nth-child(3) a:before
+    &.projects a:before
             @include fa_icon( "\f542" )
             font-weight: 900
             font-size: 1.1rem
-    &:nth-child(4) a:before
+    &.administration a:before
+            @include fa_icon( "\f4fb" )
+            font-weight: 900
+            font-size: 1.1rem
+    &.help a:before
             @include fa_icon( "\f1cd" )
             font-weight: 900
             font-size: 1.1rem
