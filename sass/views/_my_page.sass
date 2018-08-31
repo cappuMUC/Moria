@@ -1,0 +1,33 @@
+#my-page
+  flex-basis: 100%
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-between
+  & > *
+    border: none
+    margin-top: 25px
+  #list-top
+    flex-basis: 100%
+    min-height: 25px
+  #list-left, #list-right
+    flex-basis: 48%
+
+#my-page.dragging 
+  & > div
+    border: 2px dashed $c-theme-2
+    min-height: 50px
+
+div.mypage-box
+  border: 1px solid $c-theme-2
+  padding: 4px
+  margin: 5px
+  background: #ffffff
+  div.contextual
+    opacity: 0
+    transition: opacity 300ms ease-in-out
+  &:hover
+    div.contextual
+      opacity: 1
+  &.ui-sortable-helper
+    box-shadow: 0 3px 12px #7c7c7c

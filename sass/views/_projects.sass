@@ -1,0 +1,30 @@
+#projects-index
+  flex-basis: 100%
+  margin-top: 20px
+
+ul.projects.root
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-evenly
+
+li.root
+  flex-basis: 30%
+  ul.projects
+    border-left: 2px solid $c-theme-2
+
+div.root
+  padding: 5px
+  background: $c-theme-2
+  color: $c-theme-1
+  a
+    display: inline-block
+    background: $c-theme-1
+    font-size: 1.1em
+    font-weight: 600
+    padding: 2px 3px
+    border-radius: 5px
+    margin: 4px
+
+li.child
+  margin-left: 20%
