@@ -1,15 +1,13 @@
 $d-main-menu-height:3em
-$c-main-menu-background: #f0f0f0
+$c-main-menu-background: #fcfcfc
 $c-main-menu-link: $c-basic-link-dark
 
 
 #main-menu
-  height: $d-main-menu-height
   flex-basis: 100%
   background-color: $c-main-menu-background
-  box-shadow: 0 -4px 4px -4px #909090 inset
+  border-bottom: 1px solid darken($c-main-menu-background, 30%)
   & > ul
-    height: inherit
     position: relative
     display: flex
     flex-direction: row
@@ -19,16 +17,26 @@ $c-main-menu-link: $c-basic-link-dark
         a
             display: block
             font-size: 1.1em
-            font-weight: 600
             text-decoration: none
             padding: 0 15px
-            color: $c-main-menu-link
+            color: lighten($c-main-menu-link, 15%)
             transition: color 300ms ease-in-out
-        a.selected
-            border-bottom: 3px solid #00ff66
-            margin-bottom: -3px
-        a:hover
-            color: $c-theme-2
+            line-height: $d-main-menu-height
+            height: inherit
+            margin: 0 auto
+            &::after
+                content: ''
+                display: block
+                width: 100%
+                height: 2px
+                opacity: 0
+                background: darken($c-main-menu-background, 30%)
+                transition: opacity 300ms ease-in
+            &:hover::after
+                opacity: 1
+        a.selected::after, a.selected:hover::after
+            opacity: 1
+            background: $c-theme-2
 
 ul.menu-children
   position: absolute
