@@ -1,0 +1,21 @@
+body.moria
+  #header
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: stretch
+    background-color: #f0f0f0
+    h1
+      order: -1
+      flex-grow: 1
+      flex-basis: 50%
+      margin: 0 10px
+    #quick-search
+      display: flex
+      flex-direction: row
+      justify-content: flex-end
+      flex: 1 0 auto
+  &.action-login
+    #top-menu
+      display: none
