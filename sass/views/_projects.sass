@@ -5,9 +5,6 @@
 #projects-index
   flex-basis: 100%
   margin-top: 20px
-#projects-index > ul.projects.root > li.root
-  background: $c-theme-1
-   
 
 ul.projects.root
   display: flex
@@ -36,7 +33,7 @@ li.root > ul.projects li.child
   margin: 10px 0
   padding: 0 10px
 
-ul.projects li
+ul.projects li.root
   @include highlight_column( rgba( 200, 200, 200, 0.3 ) )
 
 div.child
