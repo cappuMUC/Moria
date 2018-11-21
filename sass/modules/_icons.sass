@@ -40,6 +40,10 @@
     @include fa_icon( "\f1f8" )
     font-weight: 900
 
+.icon-close::before
+    @include fa_icon( "\f00d" )
+    font-weight: 900
+
 .icon-fav-off::before
     @include fa_icon( "\f06e" )
 
@@ -276,6 +280,7 @@ a.my-account
 span.sort-handle
     font-size: 0
     text-decoration: none
+    cursor: move
     &:before
         @include fa_icon( "\f58e" )
         font-weight: 900
