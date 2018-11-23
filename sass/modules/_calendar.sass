@@ -4,8 +4,11 @@ $c-calendar-adjacent-month-background: darken( $c-calendar-current-month-backgro
 $c-calendar-border: darken( $c-calendar-adjacent-month-background, 10% )
 $c-calendar-weekday-background: $c-theme-2
 $c-calendar-weekday-text: $c-theme-1
-$c-calendar-entry-background: transparent
+$c-calendar-entry-background: $c-theme-2
+$c-calendar-entry-border: darken($c-theme-2, 10%)
+$c-calendar-entry-text: $c-basic-link-light
 $c-calendar-tip-background: #c0c0c0
+$c-calendar-today-background: #bae6cc
 
 table.cal
     margin: 10px 0
@@ -16,6 +19,8 @@ table.cal
         background-color: $c-calendar-weekday-background
     & tr
         border: none
+    & td.today
+        background-color: $c-calendar-today-background !important
     & td, &:last-child td
         padding: 3px
         border: 1px solid $c-calendar-border
@@ -40,13 +45,17 @@ table.cal div.issue
     padding: 5px
     margin: 5px 0
     border-radius: 3px
+    border-color: $c-calendar-entry-border
     background-color: $c-calendar-entry-background
+    color: $c-calendar-entry-text
+    a
+        color: $c-calendar-entry-text
     &:hover span.tip
         display: block
     span.tip
         position: absolute
         top: 10px
         left: 10px
-        z-index: 1
+        z-index: 10
         background-color: $c-calendar-tip-background
         display: none
