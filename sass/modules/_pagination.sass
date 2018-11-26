@@ -1,0 +1,20 @@
+.pagination
+  .pages
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    flex-wrap: no-wrap
+    & a
+      color: $c-basic-link-light
+      text-decoration: none
+    & > *
+      padding: 4px 6px
+      background: $c-theme-2
+      border-right: 1px solid lighten( $c-theme-2, 10% )
+    & > *:first-child
+      border-radius: 3px 0 0 3px
+    & > *:last-child
+      border-radius:  0 3px 3px 0
+      border-right: 0
+    & .current
+      background: lighten( $c-theme-2, 10% )
