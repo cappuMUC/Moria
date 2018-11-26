@@ -4,17 +4,29 @@
     flex-direction: row
     justify-content: flex-start
     flex-wrap: no-wrap
-    & a
-      color: $c-basic-link-light
-      text-decoration: none
-    & > *
+    .page
       padding: 4px 6px
+      color: $c-basic-link-light
       background: $c-theme-2
       border-right: 1px solid lighten( $c-theme-2, 10% )
-    & > *:first-child
+      a
+        padding: -4px -6px
+        display: block
+        color: $c-basic-link-light
+        text-decoration: none
+    *:first-child
       border-radius: 3px 0 0 3px
-    & > *:last-child
+    *:last-child
       border-radius:  0 3px 3px 0
       border-right: 0
-    & .current
+    .current
+      padding: 4px 6px
+      color: $c-basic-link-light
       background: lighten( $c-theme-2, 10% )
+    .previous, .next
+      padding: 4px 6px
+      background: $c-theme-2
+      color: darken($c-basic-link-light, 50%)
+    .previous.page, .next.page
+      background: $c-theme-2
+      color: $c-basic-link-light
